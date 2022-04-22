@@ -14,11 +14,20 @@ Updated: 2021-09-09 06:05:51
 /* Import af Fonts*/
 @import url("https://use.typekit.net/sxv8ysv.css");
 
-/* Forside CSS - START*/
+/* ---------- Forside CSS - START ---------- */
+
+/* ændre farven på pillen der hopper ned til en ny del af side.*/
+#scroll-to-content:before{
+	border: 2px solid #717171;
+}
+.hvidlogo{
+	filter: brightness(0) invert(1);
+}
+/* nulstiller margin-bottom på alle WP-Blocks */
 .wp-block-columns {
   margin-bottom: 0% !important;
 }
-
+/* forside slashimage grid og placering */
 .site-branding {
   display: grid !important;
   grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
@@ -29,8 +38,8 @@ Updated: 2021-09-09 06:05:51
   grid-column: 2;
 }
 
+/*forside overskrift - skrift type*/
 .site-title {
-  color: red !important;
   font-family: bee, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -38,21 +47,44 @@ Updated: 2021-09-09 06:05:51
   line-height: 0.8;
 }
 
-#schedule-a-visit {
-  font-size: clamp(25px, 10vw, 75px) !important;
-}
 
+/* diffenere er fast højte for "Andre UNESCO Skoler" & "Blev UNESCO Skole"*/
 .pinkskole,
 .blueskole {
-  height: 75vh;
+  height: 600px;
 }
 
-
+/* bytter rundt på placeringen af teskt og billede ved "bliv unesco skole"*/
 @media (max-width: 600px) {
   .blivskole {
     order: 2;
   }
 }
 
-/* Forside CSS - SLUT */
+/* ---------- Forside CSS - SLUT ---------- */
+
+
+/* ---------- FOOTER - START ---------- */
+
+/* fjerner wpzoom or powered by Wordpress*/
+/*.designed-by,
+#footer-copy .wpzoom,
+#footer .wpzoom,
+.site-info .designed-by,
+.site-info p.right,
+.footer-info .designed,
+.site-info .copyright span:nth-child(2) {
+    display: none;
+}
+.copyright{
+	display:none !important;
+}*/
+
+.site-info{
+	display:none !important;
+}
+
+
+/* ---------- FOOTER - SLUT ---------- */
+
 

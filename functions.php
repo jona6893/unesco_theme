@@ -21,4 +21,9 @@ if ( !function_exists( 'child_theme_configurator_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
+function add_script() {
+	wp_enqueue_script( "headercolor", get_stylesheet_directory_uri() . "/script.js");
+}
+add_action( 'wp_enqueue_scripts', 'add_script', 10 );
+
 // END ENQUEUE PARENT ACTION

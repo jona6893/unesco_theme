@@ -4,7 +4,7 @@
 <?php
 
 
-// Det skal rettes til, så det passer til vores data
+// Det skal rettes til, så det passer til vores data --- Der er massser af slik på vores side!! det er da fantastisk :)
 
 get_header();
 ?>
