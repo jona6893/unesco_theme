@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
 
 	console.log("hello world");
@@ -9,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	window.addEventListener('scroll', function() {
-		/*const header = document.getElementById("masthead");*/
-	
+		
 	
 	if (header.classList.contains('headroom--not-top')) {
 		console.log("Its unpinned")
@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 	});
 });
-
+*/
