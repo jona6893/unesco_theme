@@ -46,7 +46,7 @@ get_header();
 	}
 
 const url = `https://laurakapper.dk/kea/2.semester/tema_9/Passion_SugarHeaven/wp-json/wp/v2/slik?_page=100`;
-const catUrl = `https://laurakapper.dk/kea/2.semester/tema_9/Passion_SugarHeaven/wp-json/wp/v2/categories`;
+const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/categories`;
 
 
 async function getJson() {
