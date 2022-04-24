@@ -20,13 +20,15 @@ Updated: 2021-09-09 06:05:51
 #scroll-to-content:before{
 	border: 2px solid #717171;
 }
-/*
-.has-header-image .navbar, .has-header-video .navbar{
-	background-image: linear-gradient(to bottom,rgba(0,0,0,.2) 1%,rgb(5 5 5 / 24%) 100%);
-}*/
+/* bruge i JS til at ændre farve på header menu/logo */
+.sortMenuTekst{
+	color:black !important;
+	fill:#000; !important;
+}
 
 .hvidlogo{
 	filter: brightness(0) invert(1);
+	transition: 0.2s;
 }
 /* nulstiller margin-bottom på alle WP-Blocks */
 .wp-block-columns {

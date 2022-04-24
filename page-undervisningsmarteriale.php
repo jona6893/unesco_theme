@@ -45,8 +45,8 @@ get_header();
 	
 	}
 
-const url = `https://laurakapper.dk/kea/2.semester/tema_9/Passion_SugarHeaven/wp-json/wp/v2/slik?_page=100`;
-const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria`;
+const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria`;
+const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/categories`;
 
 
 async function getJson() {
@@ -93,7 +93,7 @@ function visSlikket() {
         let klon = temp.cloneNode(true).content;
 		klon.querySelector("h3").textContent = slik.title.rendered;
 		klon.querySelector("img").src = slik.billede.guid;
-        klon.querySelector(".smag").innerHTML = slik.smag;
+        klon.querySelector(".smag").innerHTML = slik.kort_beskrivelse;
 		// klon.querySelector(".beskrivelse").innerHTML = slik.beskrivelse;
 	
 		
