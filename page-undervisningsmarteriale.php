@@ -11,7 +11,9 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 <nav id="filter">
-	<button data-slik="alle">Alle</button>
+	<div id="drop-down">
+	<button data-skoletrin="alle">Alle</button>
+	</div>
 </nav>
 
 
@@ -31,9 +33,9 @@ get_header();
 </div><!-- #div -->
 <script>
 	console.log("mit_script_loader");
-	let slikket;
+	let Umaterale;
 	let categories;
-	let filterSlik ="alle";
+	let filterskoletrin = null;
 	const liste = document.querySelector("#ret-oversigt");
 	let temp = document.querySelector("template");
 	
@@ -46,22 +48,24 @@ get_header();
 	}
 
 const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria`;
-const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/categories`;
+const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/skoletrin`;
 
 
 async function getJson() {
 	let response = await fetch(url);
 	let catResponse = await fetch(catUrl);
-    slikket = await response.json();
+    Umaterale = await response.json();
 	categories = await catResponse.json();
-	visSlikket();
-	console.log(categories);
+	console.log(categories + "liste");
+	console.log(Umaterale)
+	visUmaterale();
+	
 	opretKnapper();
 
 }
 function opretKnapper() {
 categories.forEach(cat=> {
-		document.querySelector("#filter").innerHTML += `<button class="filterKnapper" data-slik="${cat.id}">${cat.name}</button>`
+		document.querySelector("#drop-down").innerHTML += `<button class="filterKnapper" data-skoletrinet="${cat.id}">${cat.name}</button>`
 	});
 
 
@@ -70,35 +74,36 @@ categories.forEach(cat=> {
 }
 
 function addEventListenersToButtons() {
-document.querySelectorAll("#filter button").forEach(elm => {elm.addEventListener("click", filtrering);
+document.querySelectorAll("#drop-down button").forEach(elm => {elm.addEventListener("click", filtrering);
 })
 };
 
 
 function filtrering() {
-filterSlik = this.dataset.slik;
-console.log("filterSlik");
+filterskoletrin = this.dataset.skoletrinet;
+console.log(filterskoletrin);
 
-visSlikket();
+visUmaterale();
 
 }
 
-function visSlikket() {
+function visUmaterale() {
 	
-	console.log(slikket);
-
+	console.log(Umaterale);
+	
 		liste.innerHTML="";
-    	slikket.forEach(slik => {
-		if (filterSlik =="alle"|| slik.categories.includes(parseInt(filterSlik))){
+    	Umaterale.forEach(materale => {
+		if (filterskoletrin == null|| materale.skoletrinet[0].id === (parseInt(filterskoletrin))){
+		console.log(filterskoletrin)
         let klon = temp.cloneNode(true).content;
-		klon.querySelector("h3").textContent = slik.title.rendered;
-		klon.querySelector("img").src = slik.billede.guid;
-        klon.querySelector(".smag").innerHTML = slik.kort_beskrivelse;
+		klon.querySelector("h3").textContent = materale.title.rendered;
+		klon.querySelector("img").src = materale.billede.guid;
+        klon.querySelector(".smag").innerHTML = materale.kort_beskrivelse;
 		// klon.querySelector(".beskrivelse").innerHTML = slik.beskrivelse;
 	
 		
-        klon.querySelector(".pris").innerHTML = slik.pris + " kr";
-		klon.querySelector("article").addEventListener("click", ()=>{location.href = slik.link;})
+        klon.querySelector(".pris").innerHTML = materale.pris + " kr";
+		klon.querySelector("article").addEventListener("click", ()=>{location.href = materale.link;})
 		liste.appendChild(klon);
 		}
 	})
