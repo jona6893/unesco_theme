@@ -11,6 +11,9 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 <nav id="filter">
+	<h3>
+		Skoletrin
+	</h3>
 	<div id="drop-down">
 	<button data-skoletrin="alle">Alle</button>
 	</div>
