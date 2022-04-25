@@ -13,6 +13,7 @@ get_header();
 <nav id="filter">
 	<h3>
 		Skoletrin
+		<img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/arrow_upward_FILL0_wght400_GRAD0_opsz48.webp">
 	</h3>
 	<div id="drop-down">
 	<button data-skoletrin="alle">Alle</button>
@@ -25,7 +26,6 @@ get_header();
 <template>
 	<article>
 		<img src="" alt=""> 
-		<h3></h3>
         <p class="smag"></p>
 		<p class="beskrivelse"></p>
 		<p class="pris"></p>
@@ -34,6 +34,88 @@ get_header();
 </template>
 
 </div><!-- #div -->
+
+<style>
+      @media (min-width: 615px) {
+        #footer {
+          --repeat: 3;
+        }
+      }
+
+      #footer {
+        padding: 0%;
+padding-bottom: 5%;
+    padding-top: 5%;
+		margin-top: 5% !important;
+        margin: 0%;
+        width: 100%;
+        height: auto;
+        background-color: rgb(21, 21, 21);
+        display: grid;
+        grid-template-columns: repeat(
+          var(--repeat, auto-fit),
+          minmax(200px, 1fr)
+        );
+        color: white;
+        align-items: center;
+      }
+      #footer a {
+        color: white;
+        text-decoration: none;
+      }
+      #footer_kontakt {
+        display: grid;
+        justify-content: center;
+        padding: 3%;
+      }
+      #footer_kontakt,
+      h3,
+      h4 {
+        color: white !important;
+      }
+      #footer_logo {
+        width: 100%;
+        filter: brightness(0) invert(1);
+        display: grid;
+        justify-content: center;
+        padding: 3%;
+      }
+      #footer_some {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 3%;
+      }
+      #footer_some img {
+        max-width: 10%;
+        min-width: 5%;
+      }
+    </style>
+  
+  
+    <section id="footer">
+      <div id="footer_logo">
+        <img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/unesco_logo-1.webp" alt="">
+      </div>
+      <div id="footer_kontakt">
+        <article>
+          <h3>National Koordinator</h3>
+          <h4>Poul Erik Christoffersen</h4>
+          <address>
+            <a href="pec@ungdomsbyen.dk">pec@ungdomsbyen.dk</a><br><br>Tlf:
+            +45 4491 4646 <br><br>Direkte: +45 2174 4275
+          </address>
+        </article>
+      </div>
+      <div id="footer_some">
+        <img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/facebook1.png" alt="">
+        <img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/instagram2.png" alt="">
+        <img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/youtube.png" alt="">
+        <img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/tiktok.png" alt="">
+      </div>
+    </section>
+
 <script>
 	console.log("mit_script_loader");
 	let Umaterale;
@@ -99,13 +181,13 @@ function visUmaterale() {
 		if (filterskoletrin == null|| materale.skoletrinet[0].id === (parseInt(filterskoletrin))){
 		console.log(filterskoletrin)
         let klon = temp.cloneNode(true).content;
-		klon.querySelector("h3").textContent = materale.title.rendered;
+		klon.querySelector(".smag").innerHTML = materale.overskrift;
 		klon.querySelector("img").src = materale.billede.guid;
-        klon.querySelector(".smag").innerHTML = materale.kort_beskrivelse;
+        klon.querySelector(".beskrivelse").innerHTML = materale.kort_beskrivelse;
 		// klon.querySelector(".beskrivelse").innerHTML = slik.beskrivelse;
 	
 		
-        klon.querySelector(".pris").innerHTML = materale.pris + " kr";
+        klon.querySelector(".pris").innerHTML = "Fokuspunkt: " + materale.fokuspunkt;
 		klon.querySelector("article").addEventListener("click", ()=>{location.href = materale.link;})
 		liste.appendChild(klon);
 		}

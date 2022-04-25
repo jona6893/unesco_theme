@@ -99,17 +99,10 @@ Updated: 2021-09-09 06:05:51
 	border: 2px grey solid;
 }
 
-/* dropdown menu filter knapper
-#filter {
-	position: relative;
+#ret-oversigt article{
+	display: grid;
+    justify-items: center;
 }
-
-#drop-down{
-
-}
-
-
-*/
 
 /* Filter knapper */
 #filter{
@@ -119,7 +112,17 @@ Updated: 2021-09-09 06:05:51
 	padding-top:150px;
 	padding-inline: 5%;
 }
-
+#filter h3{
+	display: flex;
+	cursor:pointer;
+	color: black !important;
+	background: white;
+	border: 2px solid grey;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	transition:0.3s;
+}
 #drop-down{
 	display: none;
   position: absolute;
@@ -129,25 +132,40 @@ Updated: 2021-09-09 06:05:51
   padding: 12px 16px;
   z-index: 1;
 }
+#drop-down button{
+  background-color: #f9f9f9;
+	border:none;
+}
+#filter img{
+	transition: 0.3s;
+	width: 20%;
+}
+#filter:hover h3{
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	background-color:#e6e6e6;
+	
+}
 #filter:hover #drop-down {
   display: block;
+
 }
-
-/* #filter button{
-	border-radius: 25px;
-	background-color: gray;
-	border: 2px gray solid;
-	color: white;
-} 
-
 #filter button:hover{
-	border:2px solid white;
-	background-color:#525151;
+	background-color:#e6e6e6;
 }
-#drop-down button{
-	margin:1%;
-}*/
+#filter:hover img{
+	transform:rotate(180deg)
+	
+}
 
+
+/* ---------- OMOS - START ---------- */
+/* retter side til så footer er full-width og resten af siden er normal width. starede med kun at bruge det på OMOS, mennu bruge det på stor set alle.*/
+.omos_fullwidth{
+	max-width: calc(950px + 20px);
+	margin: auto;
+}
+
+/* ---------- OMOS - START ---------- */
 
 /* ---------- FOOTER - START ---------- */
 
