@@ -26,4 +26,6 @@ function add_script() {
 }
 add_action( 'wp_enqueue_scripts', 'add_script', 10 );
 
+// add_filter( 'display_posts_shortcode_output', 'be_dps_modify_post_url', 10, 2 );
+
 // END ENQUEUE PARENT ACTION

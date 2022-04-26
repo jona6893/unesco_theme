@@ -17,18 +17,18 @@ Updated: 2021-09-09 06:05:51
 /* ---------- Forside CSS - START ---------- */
 
 /* ændre farven på pillen der hopper ned til en ny del af side.*/
-#scroll-to-content:before{
-	border: 2px solid #717171;
+#scroll-to-content:before {
+  border: 2px solid #717171;
 }
 /* bruge i JS til at ændre farve på header menu/logo */
-.sortMenuTekst{
-	color:black !important;
-	fill:#000 !important;
+.sortMenuTekst {
+  color: black !important;
+  fill: #000 !important;
 }
 
-.hvidlogo{
-	filter: brightness(0) invert(1);
-	transition: 0.2s;
+.hvidlogo {
+  filter: brightness(0) invert(1);
+  transition: 0.2s;
 }
 /* nulstiller margin-bottom på alle WP-Blocks */
 .wp-block-columns {
@@ -54,7 +54,6 @@ Updated: 2021-09-09 06:05:51
   line-height: 0.8;
 }
 
-
 /* diffenere er fast højte for "Andre UNESCO Skoler" & "Blev UNESCO Skole"*/
 .pinkskole,
 .blueskole {
@@ -73,96 +72,97 @@ Updated: 2021-09-09 06:05:51
 /* ---------- Undervisningsmarteriale CSS - START ---------- */
 
 /* padding og page width*/
-@media (max-width: 767px){
-	.site-content{
-		    padding-top: 0% ;
-	}
-	#filter{
-		padding-top: 15px !important;
-	}
+@media (max-width: 767px) {
+  .site-content {
+    padding-top: 0%;
+  }
+  #filter {
+    padding-top: 15px !important;
+  }
 }
-.site-content{
-	padding-top: 0% !important;
+.site-content {
+  padding-top: 0% !important;
 }
 
-#primary{
-	max-width:100% !important;
+#primary {
+  max-width: 100% !important;
 }
 /* Materiale oversigt*/
-#ret-oversigt{
-	padding-inline: 5%;
-	display: grid;
-	gap:20px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+#ret-oversigt {
+  padding-inline: 5%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-#ret-oversigt article{
-	border: 2px grey solid;
+#ret-oversigt article {
+  border: 2px grey solid;
+  /* display: grid; */
+  justify-items: center;
 }
 
-#ret-oversigt article{
-	display: grid;
-    justify-items: center;
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+* {
+  box-sizing: border-box;
 }
 
 /* Filter knapper */
-#filter{
-	position: relative;
-    display: inline-block;
- 	padding-bottom:2%;
-	padding-top:150px;
-	padding-inline: 5%;
+#filter {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2%;
+  padding-top: 150px;
+  padding-inline: 5%;
 }
-#filter h3{
-	display: flex;
-	cursor:pointer;
-	color: black !important;
-	background: white;
-	border: 2px solid grey;
-	align-items: center;
-	justify-content: center;
-	font-weight: 400;
-	transition:0.3s;
+#filter h3 {
+  display: flex;
+  cursor: pointer;
+  color: black !important;
+  background: white;
+  border: 2px solid grey;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  transition: 0.3s;
 }
-#drop-down{
-	display: none;
+#drop-down {
+  display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
 }
-#drop-down button{
+#drop-down button {
   background-color: #f9f9f9;
-	border:none;
+  border: none;
 }
-#filter img{
-	transition: 0.3s;
-	width: 20%;
+#filter img {
+  transition: 0.3s;
+  width: 20%;
 }
-#filter:hover h3{
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	background-color:#e6e6e6;
-	
+#filter:hover h3 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #e6e6e6;
 }
 #filter:hover #drop-down {
   display: block;
-
 }
-#filter button:hover{
-	background-color:#e6e6e6;
+#filter button:hover {
+  background-color: #e6e6e6;
 }
-#filter:hover img{
-	transform:rotate(180deg)
-	
+#filter:hover img {
+  transform: rotate(180deg);
 }
-
 
 /* ---------- OMOS - START ---------- */
 /* retter side til så footer er full-width og resten af siden er normal width. starede med kun at bruge det på OMOS, mennu bruge det på stor set alle.*/
-.omos_fullwidth{
-	max-width: calc(950px + 20px);
-	margin: auto;
+.omos_fullwidth {
+  max-width: calc(950px + 20px);
+  margin: auto;
 }
 
 /* ---------- OMOS - START ---------- */
@@ -170,11 +170,8 @@ Updated: 2021-09-09 06:05:51
 /* ---------- FOOTER - START ---------- */
 
 /* fjerner wpzoom or powered by Wordpress*/
-.site-info{
-	display:none !important;
+.site-info {
+  display: none !important;
 }
 
-
 /* ---------- FOOTER - SLUT ---------- */
-
-
