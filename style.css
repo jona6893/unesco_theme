@@ -23,7 +23,7 @@ Updated: 2021-09-09 06:05:51
 /* bruge i JS til at ændre farve på header menu/logo */
 .sortMenuTekst{
 	color:black !important;
-	fill:#000; !important;
+	fill:#000 !important;
 }
 
 .hvidlogo{
