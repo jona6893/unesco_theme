@@ -26,9 +26,9 @@ get_header();
 <template>
 	<article>
 		<img src="" alt=""> 
-        <p class="smag"></p>
-		<p class="beskrivelse"></p>
-		<p class="pris"></p>
+        <h3 class="smag"></h3>
+		<!-- <h4 class="fokuspunkt"></h4> -->
+		<h4 class="beskrivelse"></h4>
 		
 	</article>
 </template>
@@ -104,11 +104,11 @@ function visUmaterale() {
         let klon = temp.cloneNode(true).content;
 		klon.querySelector(".smag").innerHTML = materale.overskrift;
 		klon.querySelector("img").src = materale.billede.guid;
-        klon.querySelector(".beskrivelse").innerHTML = materale.kort_beskrivelse;
+        klon.querySelector(".beskrivelse").innerHTML = materale.skoletrinet[0].name;
 		// klon.querySelector(".beskrivelse").innerHTML = slik.beskrivelse;
 	
 		
-        klon.querySelector(".pris").innerHTML = "Fokuspunkt: " + materale.fokuspunkt;
+       /*klon.querySelector(".fokuspunkt").innerHTML = "Fokuspunkt: " + materale.fokuspunkt;*/
 		klon.querySelector("article").addEventListener("click", ()=>{location.href = materale.link;})
 		liste.appendChild(klon);
 		}
