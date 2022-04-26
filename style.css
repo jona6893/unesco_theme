@@ -13,6 +13,54 @@ Updated: 2021-09-09 06:05:51
 
 /* ---------- Import af Fonts ---------- */
 @import url("https://use.typekit.net/sxv8ysv.css");
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ---------- Generale ---------- */
+.sf-with-ul, .site-title, .menu-item-159, .menu-item-158, .menu-item-157, .menu-item-133, .menu-item-156{
+    cursor: default;
+	pointer-events:none;
+}
+.menu-item-159 svg{
+	cursor: button;
+	pointer-events:all;
+}
+.menu-item-158 svg{
+	cursor: button;
+	pointer-events:all;
+}
+.menu-item-157 svg{
+	cursor: button;
+	pointer-events:all;
+}
+.menu-item-156 svg{
+	cursor: button;
+	pointer-events:all;
+}
+.menu-item-133 svg{
+	cursor: button;
+	pointer-events:all;
+}
+.sub-menu{
+	cursor: button;
+	pointer-events:all;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.custom-logo-link img{
+	width:80%;
+}
+
+@media (min-width: 1025px) {
+	.navbar-toggle{
+		display: none !important;
+	}
+}
+
 
 /* ---------- Forside CSS - START ---------- */
 
@@ -72,6 +120,10 @@ Updated: 2021-09-09 06:05:51
 /* ---------- Undervisningsmarteriale CSS - START ---------- */
 
 /* padding og page width*/
+#searchform{
+	margin:0%;
+}
+
 @media (max-width: 767px) {
   .site-content {
     padding-top: 0%;
@@ -91,21 +143,24 @@ Updated: 2021-09-09 06:05:51
 #ret-oversigt {
   padding-inline: 5%;
   display: grid;
-  gap: 20px;
+  gap: 25px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 5%; 
 }
 #ret-oversigt article {
-  border: 2px grey solid;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   /* display: grid; */
   justify-items: center;
+  transition:0.2s;
+  cursor:pointer;
 }
-
-img {
-  max-width: 100%;
-  max-height: 100%;
+#ret-oversigt article:hover{
+	transform: scale(1.02);
+	box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 2px;
 }
-* {
-  box-sizing: border-box;
+.smag, .beskrivelse{
+	padding-inline:5%;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* Filter knapper */
