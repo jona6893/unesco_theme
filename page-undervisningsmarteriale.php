@@ -41,7 +41,7 @@ get_header();
 	console.log("mit_script_loader");
 	let Umaterale;
 	let categories;
-	let filterskoletrin = null;
+	let filterskoletrin = "alle";
 	const liste = document.querySelector("#ret-oversigt");
 	let temp = document.querySelector("template");
 	
@@ -53,7 +53,7 @@ get_header();
 	
 	}
 
-const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria`;
+const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria?_page=100`;
 const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/skoletrin`;
 
 
