@@ -16,7 +16,7 @@ get_header();
 		<img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/arrow_upward_FILL0_wght400_GRAD0_opsz48.webp">
 	</h3>
 	<div id="drop-down">
-	<button data-skoletrin="alle">Alle</button>
+	<button data-skoletrinet="alle">Alle</button>
 	</div>
 </nav>
 
@@ -99,7 +99,7 @@ function visUmaterale() {
 	
 		liste.innerHTML="";
     	Umaterale.forEach(materale => {
-		if (filterskoletrin == null|| materale.skoletrinet[0].id === (parseInt(filterskoletrin))){
+		if (filterskoletrin == "alle"|| materale.skoletrinet[0].id === (parseInt(filterskoletrin))){
 		console.log(filterskoletrin)
         let klon = temp.cloneNode(true).content;
 		klon.querySelector(".smag").innerHTML = materale.overskrift;

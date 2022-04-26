@@ -11,7 +11,7 @@ Updated: 2021-09-09 06:05:51
 
 */
 
-/* Import af Fonts*/
+/* ---------- Import af Fonts ---------- */
 @import url("https://use.typekit.net/sxv8ysv.css");
 
 /* ---------- Forside CSS - START ---------- */
@@ -170,19 +170,6 @@ Updated: 2021-09-09 06:05:51
 /* ---------- FOOTER - START ---------- */
 
 /* fjerner wpzoom or powered by Wordpress*/
-/*.designed-by,
-#footer-copy .wpzoom,
-#footer .wpzoom,
-.site-info .designed-by,
-.site-info p.right,
-.footer-info .designed,
-.site-info .copyright span:nth-child(2) {
-    display: none;
-}
-.copyright{
-	display:none !important;
-}*/
-
 .site-info{
 	display:none !important;
 }
