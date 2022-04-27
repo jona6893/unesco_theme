@@ -10,19 +10,26 @@ get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-<nav id="filter">
-	<h3>
-		Skoletrin
-		<img src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/arrow_upward_FILL0_wght400_GRAD0_opsz48.webp">
-	</h3>
+	<section id="listgrid">
+
+	
 	<div id="drop-down">
 	<button data-skoletrinet="alle">Alle</button>
 	</div>
+
+
+<img class="hjul" src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/image-4.png" alt="hjul">
+
+</section>
+
+</main><!-- #main -->
+<nav id="filter2">
+	<div id="drop-down2">
+		<button data-verdensml="alle">Alle</button>
+	</div>
 </nav>
 
-
-<section id="ret-oversigt"></section>
-</main><!-- #main -->
+<section id="ret-oversigt">
 <template>
 	<article>
 		<img src="" alt=""> 
@@ -32,18 +39,22 @@ get_header();
 		
 	</article>
 </template>
+</section>
 
 </div><!-- #div -->
 
-
+<
 
 <script>
 	console.log("mit_script_loader");
 	let Umaterale;
 	let categories;
+	let verdensmaal;
 	let filterskoletrin = "alle";
+	let filterverdensmaal = "alle";
 	const liste = document.querySelector("#ret-oversigt");
 	let temp = document.querySelector("template");
+	let valgtknap = []
 	
 	document.addEventListener("DOMContentLoaded", start);
 
@@ -54,16 +65,19 @@ get_header();
 	}
 
 const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria?per_page=100`;
-const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/skoletrin`;
+const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/skoletrin?per_page=100`;
+const maalUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/verdensml?per_page=100`;
 
 
 async function getJson() {
 	let response = await fetch(url);
 	let catResponse = await fetch(catUrl);
+	let maalResponse = await fetch(maalUrl);
     Umaterale = await response.json();
 	categories = await catResponse.json();
-	console.log(categories + "liste");
-	console.log(Umaterale)
+	verdensmaal = await maalResponse.json();
+	/* console.log(categories + "liste"); */
+	/* console.log(Umaterale) */
 	visUmaterale();
 	
 	opretKnapper();
@@ -74,33 +88,49 @@ categories.forEach(cat=> {
 		document.querySelector("#drop-down").innerHTML += `<button class="filterKnapper" data-skoletrinet="${cat.id}">${cat.name}</button>`
 	});
 
-
+	verdensmaal.forEach(maal => {document.querySelector("#drop-down2").innerHTML += `<button class="filterKnapper2" data-verdensml="${maal.id}">${maal.name}</button>`
+	});	
+		
+	
 	addEventListenersToButtons();
-
 }
+
 
 function addEventListenersToButtons() {
 document.querySelectorAll("#drop-down button").forEach(elm => {elm.addEventListener("click", filtrering);
+})	
+document.querySelectorAll("#drop-down2 button").forEach(elm => {elm.addEventListener("click", filtrering2);	
 })
 };
 
 
 function filtrering() {
+
 filterskoletrin = this.dataset.skoletrinet;
-console.log(filterskoletrin);
+/* console.log(filterskoletrin + "skoletrin"); */
 
 visUmaterale();
 
 }
 
+function filtrering2() {
+filterverdensmaal = this.dataset.verdensml;
+/* console.log(filterverdensmaal + "verdensmål"); */
+
+visUmaterale(); 
+}
+
+
 function visUmaterale() {
 	
-	console.log(Umaterale);
-	
+	console.log(Umaterale + "made it so far");
 		liste.innerHTML="";
     	Umaterale.forEach(materale => {
-		if (filterskoletrin == "alle"|| materale.skoletrinet[0].id === (parseInt(filterskoletrin))){
-		console.log(filterskoletrin)
+			
+		/* if (filterskoletrin == "alle" || materale.skoletrinet[0].id === (parseInt(filterskoletrin)) || materale.verdensml.includes(parseInt(filterverdensmaal)) ){ */
+		if (filterskoletrin == "alle" || materale.skoletrinet[0].id === (parseInt(filterskoletrin)) && filterverdensmaal == "alle" || materale.verdensml.includes(parseInt(filterverdensmaal))){
+		/* console.log(filterskoletrin)*/
+		console.log(filterverdensmaal) 
         let klon = temp.cloneNode(true).content;
 		klon.querySelector(".smag").innerHTML = materale.overskrift;
 		klon.querySelector("img").src = materale.billede.guid;

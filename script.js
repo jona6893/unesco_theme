@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
+const logo = document.querySelector(".header-logo-wrapper");
+	logo.classList.add("hvidlogo")
 	console.log("hello world");
-	checkpage()
+	/*checkpage()*/
 
 
 	
 });
-
+/*
 function checkpage() {
 	console.log("checkpage started")
 	const header = document.getElementById("masthead");
@@ -55,7 +56,7 @@ function checkpage() {
 		burgerIcon.forEach(e => {
 				console.log("foreach attribute")
 				e.style.setProperty("background", "white")
-			})
+			}) 
 		
 	}
 		else {
@@ -77,4 +78,4 @@ function checkpage() {
 	} }, {passive: true});
 			
 		}
-	}
+	} */
