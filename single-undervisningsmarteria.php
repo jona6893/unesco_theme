@@ -30,7 +30,7 @@ get_header();
       
       let ret;
 
-      const url = "https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria/"+<?php echo get_the_ID() ?>; 
+      const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria/<?php echo get_the_ID() ?>`; 
 
       // settings, test data, tag link, husk at fjerne max
       // key = database, API keys, manage dem --> Selve nøglen
@@ -39,15 +39,15 @@ get_header();
 
       async function getJson() {
         const data = await fetch(url);
-        slik = await data.json();
+        materale = await data.json();
         visSlikket();
 
       }
 
 
       function visSlikket() {
-document.querySelector("h2").textContent = slik.title.rendered;
- document.querySelector(".pic").src = slik.billede.guid;
+document.querySelector("h2").textContent = materale.title.rendered;
+ document.querySelector(".pic").src = materale.billede.guid;
  document.querySelector(".smag").textContent = slik.smag;
   document.querySelector(".beskrivelse").textContent = slik.beskrivelse;
   document.querySelector(".pris").textContent = slik.pris + " kr.";
