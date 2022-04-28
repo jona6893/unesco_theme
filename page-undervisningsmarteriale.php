@@ -26,6 +26,8 @@ get_header();
 <section id="grid-container">
 <nav id="filter2">
 	<div id="drop-down2">
+		<p id="tekst_til_filterering">Sorter efter FN's Verdensmål</p>
+	
 		<button data-verdensml="alle">Alle</button>
 	</div>
 </nav>

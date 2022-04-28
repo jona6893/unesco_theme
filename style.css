@@ -156,6 +156,7 @@ div#site-navigation {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-bottom: 5%;
   grid-area: 1/2;
+  margin: 2rem;
 }
 #ret-oversigt article {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -181,10 +182,11 @@ div#site-navigation {
 }
 
 #listgrid {
-  display: grid;
+  margin-top: 150px;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-top: 200px;
+  margin-top: 200px; */
 }
 
 #drop-down2 {
@@ -195,11 +197,16 @@ div#site-navigation {
   word-wrap: break-word;
 }
 
+#tekst_til_filterering {
+  border-bottom: #000 3px solid;20
+
 #drop-down2 button {
   background-color: white;
   border: none;
-  width: 15vw;
+  width: 20vw;
   overflow-wrap: break-word;
+  white-space: normal;
+  text-align: start;
 }
 
 #filter2 {
@@ -208,8 +215,12 @@ div#site-navigation {
 
 #drop-down {
   display: flex;
-  gap: 12px;
+  gap: 50px;
   flex-flow: wrap;
+}
+#drop-down button {
+  max-width: 200px;
+  /* white-space: normal; */
 }
 
 .hjul {
