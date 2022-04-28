@@ -18,11 +18,12 @@ get_header();
 	</div>
 
 
-<img class="hjul" src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/image-4.png" alt="hjul">
+<!-- '<img class="hjul" src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/image-4.png" alt="hjul">' -->
 
 </section>
 
 </main><!-- #main -->
+<section id="grid-container">
 <nav id="filter2">
 	<div id="drop-down2">
 		<button data-verdensml="alle">Alle</button>
@@ -39,6 +40,7 @@ get_header();
 		
 	</article>
 </template>
+</section>
 </section>
 
 </div><!-- #div -->

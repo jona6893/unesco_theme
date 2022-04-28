@@ -194,6 +194,8 @@ img {
 #drop-down2 button {
   background-color: white;
   border: none;
+  width: 15vw;
+  overflow-wrap: break-word;
 }
 
 #filter2 {
@@ -201,16 +203,20 @@ img {
 }
 
 #drop-down {
-  grid-area: 1/1;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  word-wrap: break-word;
+  gap: 12px;
+  flex-flow: wrap;
 }
+
 .hjul {
   grid-area: 1/2;
 }
 
+#grid-container {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 1fr;
+}
 /* ---------- OMOS - START ---------- */
 /* retter side til så footer er full-width og resten af siden er normal width. starede med kun at bruge det på OMOS, mennu bruge det på stor set alle.*/
 .omos_fullwidth {
