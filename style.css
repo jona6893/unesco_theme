@@ -198,7 +198,8 @@ div#site-navigation {
 }
 
 #tekst_til_filterering {
-  border-bottom: #000 3px solid;20
+  border-bottom: #000 3px solid;
+}
 
 #drop-down2 button {
   background-color: white;
@@ -215,12 +216,28 @@ div#site-navigation {
 
 #drop-down {
   display: flex;
-  gap: 50px;
-  flex-flow: wrap;
+  /* gap: 10px; */
+  /* flex-flow: wrap; */
+  justify-content: center;
 }
 #drop-down button {
   max-width: 200px;
-  /* white-space: normal; */
+  white-space: normal;
+  border: 2px solid #e5b252;
+  color: #e5b252;
+  background-color: white;
+  padding: 10px;
+  margin-left: -2px;
+}
+
+#drop-down button:hover {
+  background-color: #e5b252;
+  color: white;
+}
+
+.valgt {
+  background-color: #e5b252 !important;
+  color: white !important;
 }
 
 .hjul {
@@ -231,6 +248,16 @@ div#site-navigation {
   display: grid;
   grid-template-columns: 20vw 1fr;
   grid-template-rows: 1fr;
+  margin-top: 2rem;
+}
+
+.dropdown2style {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown2style {
+
 }
 /* ---------- OMOS - START ---------- */
 /* retter side til så footer er full-width og resten af siden er normal width. starede med kun at bruge det på OMOS, mennu bruge det på stor set alle.*/

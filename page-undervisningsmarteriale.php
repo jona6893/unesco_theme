@@ -4,18 +4,22 @@
 <?php
 
 
+
+
 // Det skal rettes til, så det passer til vores data --- Der er massser af slik på vores side!! det er da fantastisk :)
 
 get_header();
 ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 	<section id="listgrid">
 
 	
 	<div id="drop-down">
-	<button data-skoletrinet="alle">Alle</button>
+	<button data-skoletrinet="alle" class="valgt" >Alle</button>
 	</div>
+
 
 
 <!-- '<img class="hjul" src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/image-4.png" alt="hjul">' -->
@@ -59,6 +63,9 @@ get_header();
 	const liste = document.querySelector("#ret-oversigt");
 	let temp = document.querySelector("template");
 	let valgtknap = []
+	let classes = "farve";
+	let number = 0;
+
 	
 	document.addEventListener("DOMContentLoaded", start);
 
@@ -92,7 +99,9 @@ categories.forEach(cat=> {
 		document.querySelector("#drop-down").innerHTML += `<button class="filterKnapper" data-skoletrinet="${cat.id}">${cat.name}</button>`
 	});
 
-	verdensmaal.forEach(maal => {document.querySelector("#drop-down2").innerHTML += `<button class="filterKnapper2" data-verdensml="${maal.id}">${maal.name}</button>`
+	verdensmaal.forEach(maal =>  {
+		number++ 
+		document.querySelector("#drop-down2").innerHTML += `<div class="dropdown2style"><div class="${classes + number}" ></div><button class="filterKnapper2"  data-verdensml="${maal.id}">${maal.name}</button></div>`
 	});	
 		
 	
@@ -112,7 +121,8 @@ function filtrering() {
 
 filterskoletrin = this.dataset.skoletrinet;
 /* console.log(filterskoletrin + "skoletrin"); */
-
+document.querySelector(".valgt").classList.remove("valgt");
+this.classList.add("valgt");
 visUmaterale();
 
 }
