@@ -61,19 +61,114 @@ img {
   width: 80%;
 }
 
+/** Ny styling af vores menupunkter */
+/* -------------------------- */
+.menu-item-159 ul {
+  border-top: solid 2px #e5b252 !important;
+  background: #53abce !important;
+}
+
+.menu-item-159 ul a {
+  color: white !important;
+  transition: 0.5s !important;
+}
+
+.menu-item-159 ul a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+
+.menu-item-159 ul::before {
+  border-bottom: 8px solid #e5b252 !important;
+}
+/* -------------------------- */
+
+.menu-item-158 ul {
+  border-top: solid 2px #becb5c !important;
+  background: #53abce !important;
+}
+.menu-item-158 ul a {
+  color: white !important;
+  transition: 0.5s !important;
+}
+.menu-item-158 ul a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+.menu-item-158 ul::before {
+  border-bottom: 8px solid #becb5c !important;
+}
+/* -------------------------- */
+.menu-item-157 ul {
+  border-top: solid 2px #b03a41 !important;
+  background: #53abce !important;
+}
+.menu-item-157 ul a {
+  color: white !important;
+  transition: 0.5s !important;
+}
+.menu-item-157 ul a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+.menu-item-157 ul::before {
+  border-bottom: 8px solid #b03a41 !important;
+}
+/* ------------------------- */
+.menu-item-133 ul {
+  border-top: solid 2px #932672 !important;
+  background: #53abce !important;
+}
+.menu-item-133 ul a {
+  color: white !important;
+  transition: 0.5s !important;
+}
+.menu-item-133 ul a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+.menu-item-133 ul::before {
+  border-bottom: 8px solid #932672 !important;
+}
+/* ------------------------- */
+.menu-item-156 ul {
+  border-top: solid 2px #1c7ba0 !important;
+  background: #53abce !important;
+}
+.menu-item-156 ul a {
+  color: white !important;
+  transition: 0.5s !important;
+}
+.menu-item-156 ul a:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+.menu-item-156 ul::before {
+  border-bottom: 8px solid #1c7ba0 !important;
+}
+/* ------------------------- */
+/* *------------Styling slut------------ */
+
 @media (min-width: 1025px) {
   .navbar-toggle {
     display: none !important;
   }
 }
-
+/* Den nye nav farve */
 div#site-navigation {
   background-color: #53abcebf;
 }
 
+/* Styling af text på forsiden */
+.entry-header .inner-wrap h1 {
+  margin-top: 150px;
+}
+.site-description {
+  text-align: start;
+}
 /* ---------- Forside CSS - START ---------- */
 
-/* ændre farven på pillen der hopper ned til en ny del af side.*/
+/* ændre farven på pilen der hopper ned til en ny del af side.*/
 #scroll-to-content:before {
   border: 2px solid #717171;
 }
@@ -120,7 +215,7 @@ div#site-navigation {
 /* bytter rundt på placeringen af teskt og billede ved "bliv unesco skole"*/
 @media (max-width: 600px) {
   .blivskole {
-    order: 2;
+    /* order: 2; */
   }
 }
 
@@ -148,6 +243,7 @@ div#site-navigation {
 #primary {
   max-width: 100% !important;
 }
+
 /* Materiale oversigt*/
 #ret-oversigt {
   padding-inline: 5%;
@@ -183,10 +279,6 @@ div#site-navigation {
 
 #listgrid {
   margin-top: 150px;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin-top: 200px; */
 }
 
 #drop-down2 {
@@ -217,26 +309,16 @@ div#site-navigation {
   text-align: start;
 }
 
-#filter2 {
-  /* display: none; */
-}
-
 #drop-down {
   display: flex;
-  /* gap: 10px; */
-  /* flex-flow: wrap; */
   justify-content: space-evenly;
   justify-items: start;
   max-width: 100vw;
 }
 #drop-down button {
-  /* max-width: 200px; */
-  /* white-space: normal; */
   border: 2px solid #e5b252;
   color: #e5b252;
   background-color: white;
-  /* padding: 10px;
-  margin-left: -2px; */
 }
 
 #drop-down button:hover {
@@ -254,10 +336,6 @@ div#site-navigation {
   color: #53abce;
 }
 
-.hjul {
-  grid-area: 1/2;
-}
-
 #grid-container {
   display: grid;
   grid-template-columns: 20vw 1fr;
@@ -273,6 +351,8 @@ div#site-navigation {
 .alleknappen {
   padding-left: 15px;
 }
+
+/*  Dette er styling til verdensmål punkter!!! */
 .farve1 {
   width: 20px;
   height: 20px;
@@ -392,5 +472,9 @@ div#site-navigation {
 .site-info {
   display: none !important;
 }
+/* 
+footer #colophon {
+  background-color: #53abcebf;
+} */
 
 /* ---------- FOOTER - SLUT ---------- */

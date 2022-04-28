@@ -22,7 +22,7 @@ get_header();
 
 
 
-<!-- '<img class="hjul" src="https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-content/uploads/2022/04/image-4.png" alt="hjul">' -->
+
 
 </section>
 
