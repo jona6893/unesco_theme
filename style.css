@@ -67,6 +67,10 @@ img {
   }
 }
 
+div#site-navigation {
+  background-color: #53abcebf;
+}
+
 /* ---------- Forside CSS - START ---------- */
 
 /* ændre farven på pillen der hopper ned til en ny del af side.*/
