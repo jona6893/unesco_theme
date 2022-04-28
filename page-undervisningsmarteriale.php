@@ -32,7 +32,7 @@ get_header();
 	<div id="drop-down2">
 		<p id="tekst_til_filterering">Sorter efter FN's Verdensmål</p>
 	
-		<button data-verdensml="alle">Alle</button>
+		<button data-verdensml="alle" class="alleknappen valgt2">Alle</button>
 	</div>
 </nav>
 
@@ -130,6 +130,8 @@ visUmaterale();
 function filtrering2() {
 filterverdensmaal = this.dataset.verdensml;
 /* console.log(filterverdensmaal + "verdensmål"); */
+document.querySelector(".valgt2").classList.remove("valgt2");
+this.classList.add("valgt2");
 
 visUmaterale(); 
 }

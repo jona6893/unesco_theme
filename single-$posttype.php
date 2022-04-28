@@ -30,7 +30,8 @@ get_header();
       
       let ret;
 
-      const url = "https://laurakapper.dk/kea/2.semester/tema_9/Passion_SugarHeaven/wp-json/wp/v2/slik/"+<?php echo get_the_ID() ?>; 
+      const url = "https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria/"+<?php echo get_the_ID() ?>; 
+
       // settings, test data, tag link, husk at fjerne max
       // key = database, API keys, manage dem --> Selve nøglen
 
