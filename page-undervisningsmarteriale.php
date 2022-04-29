@@ -75,7 +75,7 @@ get_header();
 	
 	}
 
-const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/undervisningsmateria?per_page=100`;
+const url = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/uvmaterialer?per_page=100`;
 const catUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/skoletrin?per_page=100`;
 const maalUrl = `https://meritfilm.dk/kea/09_cms/test_site/wordpress/wp-json/wp/v2/verdensml?per_page=100`;
 
