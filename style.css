@@ -61,6 +61,10 @@ img {
   width: 80%;
 }
 
+/* .wp-block-column, .wp-block-image, .wp-block-button {
+  padding-inline: 5%;
+} */
+
 /** Ny styling af vores menupunkter */
 /* -------------------------- */
 .menu-item-159 ul {
@@ -146,6 +150,9 @@ img {
 .menu-item-156 ul::before {
   border-bottom: 8px solid #1c7ba0 !important;
 }
+.side-nav__scrollable-container{
+  background-color: #53abcebf;
+}
 /* ------------------------- */
 /* *------------Styling slut------------ */
 
@@ -166,7 +173,7 @@ div#site-navigation {
 .site-description {
   text-align: start;
 }
-/* ---------- Forside CSS - START ---------- */
+/** ---------- Forside CSS - START ---------- */
 
 /* ændre farven på pilen der hopper ned til en ny del af side.*/
 #scroll-to-content:before {
@@ -192,7 +199,9 @@ div#site-navigation {
   grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
   justify-content: start;
 }
-
+.site-branding h1{
+  letter-spacing: 25px;
+}
 .inner-wrap {
   grid-column: 2;
 }
@@ -210,18 +219,36 @@ div#site-navigation {
 .pinkskole,
 .blueskole {
   height: 600px;
+  margin-top: 100px;
 }
 
 /* bytter rundt på placeringen af teskt og billede ved "bliv unesco skole"*/
-@media (max-width: 600px) {
-  .blivskole {
-    /* order: 2; */
+@media (max-width: 1094px) {
+  .wp-block-buttons>.wp-block-button.wp-block-button__width-25{
+    width: 118.375px;
   }
 }
+@media (max-width: 600px) {
+  .blivskole {
+     order: 2;
+  }
+  .pinkskole{
+    margin-top: 100px;
+    padding-top: 10%;
+  }
+  .wp-block-group__inner-container{
+    margin-top: 100px;
+    padding-top: 10%;
+  }
+  .site-branding{
+    display: block !important;
+  }
+ 
+}
 
-/* ---------- Forside CSS - SLUT ---------- */
+/** ---------- Forside CSS - SLUT ---------- */
 
-/* ---------- Undervisningsmarteriale CSS - START ---------- */
+/** ---------- Undervisningsmarteriale CSS - START ---------- */
 
 /* padding og page width*/
 #searchform {
@@ -231,6 +258,7 @@ div#site-navigation {
 @media (max-width: 767px) {
   .site-content {
     padding-top: 0%;
+    margin-top: -100px
   }
   #filter {
     padding-top: 15px !important;
@@ -270,7 +298,7 @@ div#site-navigation {
   padding-inline: 5%;
   font-family: "Montserrat", sans-serif;
 }
-
+/* Filter Menuer */
 #side-filter {
   display: grid;
   grid-template-columns: 0.05fr 1fr;
@@ -456,17 +484,118 @@ div#site-navigation {
   background-color: #244865;
   border-radius: 50%;
 }
+/* MobilVersion */
 
-/* ---------- OMOS - START ---------- */
+.col_btn{
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  #drop-down{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(237, 237, 237);
+  } 
+.col_btn{
+  display: block;
+  border: 2px solid #e5b252;
+  color: #e5b252;
+  background-color: white
+
+}
+#drop-down button{
+  display: block;
+  width: 170px;
+}
+.disnone{
+  display: none !important;
+}
+#listgrid{
+  display: grid;
+  justify-items: center;
+}
+body, button, input, select, textarea{
+  font-size: 12px;
+}
+#grid-container{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 1fr;
+}
+#ret-oversigt{
+    padding-inline: 5%;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 5%;
+    grid-area: 2/1; 
+    margin: 1rem;
+}
+#drop-down2 {
+    grid-area: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inherit;
+  /*   align-items: center; */
+    word-wrap: break-word;
+    justify-content: flex-start;
+}
+#filter2{
+  padding-inline: 5%;
+}
+#tekst_til_filterering{
+  cursor: pointer;
+}
+#drop-down2 button{
+  width: 100%;
+}
+}
+
+/** ---------- Undervisningsmarteriale CSS - SLUT ---------- */
+
+/** ---------- Single View - START ---------- */
+
+#singleView-slik{
+  display: grid;
+    justify-items: center;
+margin-top: 25px;
+padding-inline: 5%;
+padding-bottom: 5%;
+}
+
+.backbtn{
+  margin-top: 125px;
+  margin-left: 5%;
+  background-color:#e5b252;
+  color: white;
+  border: none;
+}
+#singleView-slik h2{
+  padding: 0% !important;
+  margin: 0% !important;
+}
+#singleView-slik p{
+  padding: 0% !important;
+  margin: 0% !important;
+}
+#singleView-slik div{
+  padding-top:5%;
+}
+
+
+/** ---------- Sinlge View - SLUT ---------- */
+
+/** ---------- OMOS - START ---------- */
 /* retter side til så footer er full-width og resten af siden er normal width. starede med kun at bruge det på OMOS, mennu bruge det på stor set alle.*/
 .omos_fullwidth {
   max-width: calc(950px + 20px);
   margin: auto;
+  padding-inline: 5%;
 }
 
-/* ---------- OMOS - START ---------- */
+/** ---------- OMOS - START ---------- */
 
-/* ---------- FOOTER - START ---------- */
+/** ---------- FOOTER - START ---------- */
 
 /* fjerner wpzoom or powered by Wordpress*/
 .site-info {
@@ -477,4 +606,4 @@ footer #colophon {
   background-color: #53abcebf;
 } */
 
-/* ---------- FOOTER - SLUT ---------- */
+/** ---------- FOOTER - SLUT ---------- */
