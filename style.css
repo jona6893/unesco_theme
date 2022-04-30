@@ -512,7 +512,9 @@ div#site-navigation {
 }
 #listgrid{
   display: grid;
-  justify-items: center;
+  justify-items: start;
+  padding-inline: 5%;
+  margin-left: 20px;
 }
 body, button, input, select, textarea{
   font-size: 12px;
