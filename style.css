@@ -556,11 +556,12 @@ body, button, input, select, textarea{
 /** ---------- Single View - START ---------- */
 
 #singleView-slik{
-  display: grid;
+  display: flex;
     justify-items: center;
 margin-top: 25px;
 padding-inline: 5%;
 padding-bottom: 5%;
+gap: 20px;
 }
 
 .backbtn{
@@ -579,7 +580,38 @@ padding-bottom: 5%;
   margin: 0% !important;
 }
 #singleView-slik div{
+}
+#singleView-slik img{
+  width: 50%;
+  height: 50%;
+}
+
+@media (max-width: 800px) {
+#singleView-slik{
+  display: grid;
+   justify-items: center;
+   margin-top: 25px;
+padding-inline: 5%;
+padding-bottom: 5%;
+    justify-content: center;
+}
+#singleView-slik img{
+  width: 100%;
+  height: 100%;
+}
+#singleView-slik div{
   padding-top:5%;
+}
+#singleView-slik h2{
+  padding: 0% !important;
+  padding-inline: 5% !important;
+  margin: 0% !important;
+}
+#singleView-slik p{
+  padding: 0% !important;
+  padding-inline: 5% !important;
+  margin: 0% !important;
+}
 }
 
 
