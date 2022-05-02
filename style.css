@@ -528,7 +528,7 @@ body, button, input, select, textarea{
     padding-inline: 5%;
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-bottom: 5%;
     grid-area: 2/1; 
     margin: 1rem;
@@ -558,8 +558,9 @@ body, button, input, select, textarea{
 /** ---------- Single View - START ---------- */
 
 #singleView-slik{
-  display: flex;
+  display: grid;
     justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 margin-top: 25px;
 padding-inline: 5%;
 padding-bottom: 5%;
@@ -583,20 +584,20 @@ gap: 20px;
 }
 #singleView-slik div{
 }
-#singleView-slik img{
+/* #singleView-slik img{
   width: 50%;
   height: 50%;
-}
+} */
 
 @media (max-width: 800px) {
-#singleView-slik{
+/* #singleView-slik{
   display: grid;
    justify-items: center;
    margin-top: 25px;
 padding-inline: 5%;
 padding-bottom: 5%;
     justify-content: center;
-}
+} */
 #singleView-slik img{
   width: 100%;
   height: 100%;
